@@ -1,0 +1,6 @@
+---
+- hosts: metrics
+  roles:
+    - { role: mtchavez.influxdb }
+  sudo: yes
+  gather_facts: yes

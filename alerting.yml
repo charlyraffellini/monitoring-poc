@@ -1,0 +1,24 @@
+---
+- hosts: alerting
+  roles:
+    - { role: wunzeco.kapacitor }
+  sudo: yes
+  gather_facts: yes
+  vars:
+    - kapacitor_influxdbs:
+      - name: somewhereinfluxdb
+        enabled: true
+        default: true
+        urls: [ "http://192.168.33.10:8086" ]
+        username: ""
+        password: ""
+        timeout: 0
+        #ssl-ca: "/etc/kapacitor/ca.pem"
+        #ssl-cert: "/etc/kapacitor/cert.pem"
+        #ssl-key: "/etc/kapacitor/key.pem"
+        insecure-skip-verify: false
+        udp-buffer: 1000
+        udp-read-buffer: 0
+        #subscriptions:
+        #  my_database: [ "default", "longterm" ]
+        #  another_db:  [ "default" ]

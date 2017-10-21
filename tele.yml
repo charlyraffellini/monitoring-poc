@@ -1,0 +1,13 @@
+---
+- hosts: servers
+  roles:
+    - { role: dj-wasabi.telegraf }
+  sudo: yes
+  gather_facts: yes
+  vars:
+    - telegraf_agent_output:
+      - type: influxdb
+        config:
+          - urls = ["http://192.168.33.10:8086"]
+          - database = "telegraf"
+          - precision = "s"

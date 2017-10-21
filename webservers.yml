@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  roles:
+    - { role: influxdata.chronograf }
+    - { role: ansiblebit.grafana }
+  sudo: yes
+  gather_facts: yes
+  vars:
+    - grafana_admin_password: "super secret"

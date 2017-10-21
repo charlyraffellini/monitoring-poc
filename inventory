@@ -1,0 +1,11 @@
+[servers]
+telegraph        ansible_host=192.168.33.40  ansible_user=vagrant    ansible_ssh_pass=vagrant
+
+[metrics]
+influxdb    ansible_host=192.168.33.10  ansible_user=vagrant    ansible_ssh_pass=vagrant
+
+[webservers]
+chronograph    ansible_host=192.168.33.20  ansible_user=vagrant    ansible_ssh_pass=vagrant
+
+[alerting]
+kapacitor    ansible_host=192.168.33.20  ansible_user=vagrant    ansible_ssh_pass=vagrant
