@@ -9,7 +9,7 @@
       - name: somewhereinfluxdb
         enabled: true
         default: true
-        urls: [ "http://192.168.33.10:8086" ]
+        urls: [ "http://10.254.1.5:8086" ]
         username: ""
         password: ""
         timeout: 0

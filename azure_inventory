@@ -1,0 +1,16 @@
+[metrics]
+influxdb    ansible_host=10.254.1.5  ansible_user=UserName    ansible_ssh_pass="password#"
+
+[webservers]
+chronograph    ansible_host=10.254.1.6  ansible_user=UserName    ansible_ssh_pass="password#"
+
+[alerting]
+kapacitor    ansible_host=10.254.1.6  ansible_user=UserName    ansible_ssh_pass="password#"
+
+[tele]
+server        ansible_host=10.254.1.4  ansible_user=UserName    ansible_ssh_pass="password#"
+
+[workers:children]
+tele
+webservers
+metrics
