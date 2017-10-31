@@ -13,6 +13,7 @@
         username: ""
         password: ""
         timeout: 0
+        kapacitor-hostname: "10.254.1.6" # <== kapacitor creates a subscription in influxdb using this as hostname
         #ssl-ca: "/etc/kapacitor/ca.pem"
         #ssl-cert: "/etc/kapacitor/cert.pem"
         #ssl-key: "/etc/kapacitor/key.pem"
